@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Psanctuary reading room</title>
+<meta name="description" content="Psanctuary's public reading room: decks, public procedures, proposals, and how to ask for access to the members' room.">
+<meta name="theme-color" content="#0d9488">
+<link rel="icon" href="https://psanctuary.github.io/favicon.svg" type="image/svg+xml">
+<style>
+  :root {
+    --primary: #0d9488; --deep: #134e4a; --mid: #0f766e; --tint: #ccfbf1;
+    --for: #64748b; --ink: #0f172a; --muted: #475569; --bg: #f8fafc; --card: #ffffff; --line: #d6e4e2;
+    --link: #0f766e; --focus: #0d9488;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --deep: #ccfbf1; --mid: #5eead4; --tint: #123b38; --ink: #e2e8f0; --muted: #a3b3c2;
+      --bg: #0b1514; --card: #10201f; --line: #1f3a37; --link: #5eead4; --focus: #5eead4; --for: #94a3b8;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  a { color: var(--link); text-underline-offset: 2px; }
+  a:focus-visible, summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+  .skip { position: absolute; left: -999px; top: 0; background: var(--card); padding: 8px 12px; }
+  .skip:focus { left: 16px; top: 16px; z-index: 2; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+  header { border-top: 6px solid var(--primary); background: var(--tint); }
+  header .wrap { padding-top: 40px; padding-bottom: 32px; }
+  .eyebrow { margin: 0 0 6px; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: var(--mid); font-weight: 600; }
+  h1 { margin: 0; color: var(--deep); font-size: clamp(30px, 6vw, 44px); line-height: 1.15; }
+  .lede { margin: 12px 0 0; max-width: 62ch; color: var(--ink); }
+  main .wrap { padding-top: 12px; padding-bottom: 40px; }
+  h2 { color: var(--deep); font-size: 22px; margin: 36px 0 12px; padding-bottom: 6px; border-bottom: 2px solid var(--primary); }
+  .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+  .card h3 { margin: 0 0 6px; font-size: 18px; color: var(--mid); }
+  .card p { margin: 0 0 10px; color: var(--muted); font-size: 15.5px; }
+  .card .links { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px 16px; font-weight: 600; font-size: 15.5px; }
+  .tag { display: inline-block; font-size: 12.5px; font-weight: 600; padding: 2px 8px; border-radius: 999px;
+         background: var(--tint); color: var(--deep); border: 1px solid var(--line); margin-bottom: 8px; }
+  .tag.soon { background: transparent; color: var(--for); border-color: var(--for); }
+  ol.steps { padding-left: 22px; margin: 8px 0 0; }
+  ol.steps li { margin: 0 0 8px; }
+  .note { border-left: 4px solid var(--primary); background: var(--tint); padding: 10px 14px; border-radius: 0 8px 8px 0; margin: 14px 0 0; }
+  footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 14.5px; }
+  footer .wrap { padding-top: 18px; padding-bottom: 28px; }
+  footer ul { list-style: none; padding: 0; margin: 0 0 8px; display: flex; flex-wrap: wrap; gap: 6px 18px; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the reading room</a>
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Psanctuary · public reading room</p>
+    <h1>Proposals, procedures and decks</h1>
+    <p class="lede">What Psanctuary has made ready for visitors, in one place. Drafts are read first by members in a
+      private room; a page appears here only when an officer lists it for the public.</p>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+
+    <h2 id="decks">Decks</h2>
+    <div class="grid">
+      <article class="card">
+        <span class="tag soon">Being made</span>
+        <h3>Psanctuary, a walk through</h3>
+        <p>Proposals, procedures and the road ahead, for Psanctuary's people and anyone curious. Slides, a PDF and the
+          editable source will be linked here when it is ready.</p>
+      </article>
+      <article class="card">
+        <span class="tag">Public</span>
+        <h3>The template, walked through</h3>
+        <p>How the proposals, procedures and sites used here are shaped, from the lab's public template.</p>
+        <ul class="links">
+          <li><a href="https://github.com/drasticstatic/my-template/blob/main/decks/my-template-walkthrough.marp.pdf">PDF</a></li>
+          <li><a href="https://github.com/drasticstatic/my-template/blob/main/decks/my-template-walkthrough.marp.md">Source</a></li>
+        </ul>
+      </article>
+    </div>
+
+    <h2 id="procedures">Procedures</h2>
+    <div class="grid">
+      <article class="card">
+        <span class="tag">Public copy</span>
+        <h3>Standard operating procedures</h3>
+        <p>How an approved thing is done, step by step. The public copy holds only the procedures an officer has listed
+          for visitors; until the first one is listed, it holds a short README.</p>
+        <ul class="links">
+          <li><a href="https://github.com/psanctuary/ops-standard-operating-procedures-public">Open the public copy</a></li>
+        </ul>
+      </article>
+    </div>
+
+    <h2 id="proposals">Proposals</h2>
+    <div class="grid">
+      <article class="card">
+        <span class="tag soon">Members first</span>
+        <h3>Where ideas become plans</h3>
+        <p>Psanctuary's proposals are read and decided by its people first, so there is no public preview of them yet.
+          Members read every one, with a PDF of each, in the private reading room.</p>
+        <ul class="links">
+          <li><a href="https://github.com/psanctuary/reading-room">Members' reading room</a></li>
+        </ul>
+      </article>
+    </div>
+
+    <h2 id="access">Ask for access</h2>
+    <p>The members' reading room is private to Psanctuary's people. To read it:</p>
+    <ol class="steps">
+      <li>Write to the church at <a href="mailto:info@psanctuary.org">info@psanctuary.org</a> or through
+        <a href="https://www.psanctuary.org/contact">the contact form</a>, and say you would like to read the drafts.
+        Include your GitHub username if you have one (a free account is enough).</li>
+      <li>An officer says yes; the technical steward, <a href="https://github.com/drasticstatic">Christopher W</a>,
+        sends a GitHub invitation to Psanctuary and its <em>readers</em> team.</li>
+      <li>Accept the invitation (the email from GitHub, or the bell icon on github.com), turn on two-factor
+        authentication, and open <a href="https://github.com/psanctuary/reading-room">the reading room</a>. You read it
+        in your browser; nothing to install.</li>
+    </ol>
+    <p class="note">Bringing an AI helper is welcome and has its own short steps:
+      <a href="https://github.com/psanctuary/.github/blob/main/ONBOARDING.md">how Psanctuary welcomes members and their helpers</a>.</p>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <ul>
+      <li><a href="https://www.psanctuary.org">psanctuary.org</a></li>
+      <li><a href="https://psanctuary.github.io/">Entry portal</a></li>
+      <li><a href="https://psanctuary.github.io/changelog-astro-public/">AstroLog</a></li>
+      <li><a href="https://github.com/psanctuary">Psanctuary on GitHub</a></li>
+    </ul>
+    <p>This page is copied from Psanctuary's private reading room by a workflow; it is not edited here.</p>
+  </div>
+</footer>
+</body>
+</html>
