@@ -1,12 +1,19 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/psanctuary/.github/main/profile/assets/banner-spore.svg">
+    <img alt="Psanctuary: the spore print turns slowly (still when your system asks for reduced motion)" src="https://raw.githubusercontent.com/psanctuary/.github/main/profile/assets/banner-paper.svg" width="100%">
+  </picture>
+</p>
+
 <div align="center">
 
 # Psanctuary reading room · public
 
-*What Psanctuary has made ready for visitors: decks, public procedures, and how to ask for access to the members' room.*
+*What Psanctuary has made ready for visitors: 000 Start here, the nine universal procedures, the decks, and the way into the members' room.*
 
 ![Room](https://img.shields.io/badge/room-public-0d9488?style=flat-square)
 ![Site](https://img.shields.io/badge/site-GitHub_Pages-134e4a?style=flat-square)
-![Changed](https://img.shields.io/badge/changed-2026--10--31-0f766e?style=flat-square)
+![Changed](https://img.shields.io/badge/changed-2026--11--01-0f766e?style=flat-square)
 ![For](https://img.shields.io/badge/For-Visitors-64748b?style=flat-square)
 
 **[Open the reading room → psanctuary.github.io/reading-room-public](https://psanctuary.github.io/reading-room-public/)**
@@ -19,6 +26,14 @@ The public side of Psanctuary's reading room. Drafts are read first by Psanctuar
 arrives here only when an officer lists it in that room's allowlist, and a workflow copies it after a check that stops
 anything private or secret-shaped. The front page (`index.html`) is plain HTML with no build step, so GitHub Pages serves
 it as it is.
+
+## What is here
+
+| Path | What it is |
+|---|---|
+| [`proposals/000-start-here/`](proposals/000-start-here/README.md) | how a proposal reads, how to answer, how to bring a helper ([PDF](proposals/pdf/000-start-here.pdf)) |
+| [`procedures/`](procedures/) | the nine universal procedures, each with a PDF under `procedures/pdf/`; new to GitHub? [SOP-COM-001](procedures/COM/SOP-COM-001-new-to-github-your-first-hour.md) |
+| [Members' reading room](https://github.com/psanctuary/reading-room) | every draft, for Psanctuary's readers (a 404 until you are one) |
 
 ## Please do not edit this repository by hand
 

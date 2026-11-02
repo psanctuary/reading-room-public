@@ -49,6 +49,20 @@
   footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 14.5px; }
   footer .wrap { padding-top: 18px; padding-bottom: 28px; }
   footer ul { list-style: none; padding: 0; margin: 0 0 8px; display: flex; flex-wrap: wrap; gap: 6px 18px; }
+  .i { width: 1.1em; height: 1.1em; vertical-align: -0.18em; margin-right: 0.35em; color: var(--primary); flex: none; }
+  h2 .i { width: 0.95em; height: 0.95em; }
+  .door { display: flex; gap: 16px; align-items: flex-start; background: var(--card); border: 2px solid var(--primary);
+          border-radius: 14px; padding: 18px 20px; margin: 22px 0 6px; }
+  .door .big { width: 40px; height: 40px; color: var(--primary); flex: none; }
+  .door h2 { margin: 0 0 4px; border: 0; padding: 0; }
+  .door p { margin: 0 0 8px; color: var(--muted); }
+  .door .cta { display: inline-block; font-weight: 700; padding: 8px 14px; border-radius: 999px; background: var(--primary);
+               color: #fff; text-decoration: none; }
+  .door .cta:hover { filter: brightness(1.08); }
+  .door .cta .i { color: #fff; }
+  ul.sops { margin: 6px 0 0; padding-left: 20px; font-size: 15.5px; }
+  ul.sops li { margin: 0 0 4px; }
+  @media (prefers-reduced-motion: no-preference) { .door .cta { transition: filter .2s ease; } }
 </style>
 </head>
 <body>
@@ -65,12 +79,46 @@
 <main id="main">
   <div class="wrap">
 
-    <h2 id="decks">Decks</h2>
+    <section class="door" aria-labelledby="door-h">
+      <svg class="big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 4h3a2 2 0 0 1 2 2v14"/><path d="M2 20h3"/><path d="M13 20h9"/><path d="M10 12v.01"/><path d="M13 4.562v16.157a1 1 0 0 1-1.242.97L5 20V5.562a2 2 0 0 1 1.515-1.94l4-1A2 2 0 0 1 13 4.561Z"/></svg>
+      <div>
+        <h2 id="door-h">The members' reading room</h2>
+        <p>Psanctuary's people read every draft first, in a private room: all the proposals, the procedures and the decks,
+          each a page and a PDF. This public page is its front step. Signed in as a reader, the link opens the room;
+          otherwise GitHub shows a 404, which only means "not a reader yet" (<a href="#access">ask for access</a>).</p>
+        <a class="cta" href="https://github.com/psanctuary/reading-room"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Enter the members' room</a>
+      </div>
+    </section>
+
+    <h2 id="start"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/><circle cx="12" cy="12" r="10"/></svg>Start here</h2>
+    <div class="grid">
+      <article class="card">
+        <span class="tag">Public</span>
+        <h3>000 Start here</h3>
+        <p>How a proposal reads, how to answer, how to bring your AI helper, and five GitHub words. Every other proposal
+          assumes you have read this one.</p>
+        <ul class="links">
+          <li><a href="https://github.com/psanctuary/reading-room-public/blob/main/proposals/000-start-here/README.md">Read it</a></li>
+          <li><a href="https://github.com/psanctuary/reading-room-public/blob/main/proposals/pdf/000-start-here.pdf">PDF</a></li>
+        </ul>
+      </article>
+      <article class="card">
+        <span class="tag">Public</span>
+        <h3>New to GitHub? Your first hour</h3>
+        <p>Your own account and password, two-factor sign-in, the invitation, five words, the reading room, a helper.</p>
+        <ul class="links">
+          <li><a href="https://github.com/psanctuary/reading-room-public/blob/main/procedures/COM/SOP-COM-001-new-to-github-your-first-hour.md">SOP-COM-001</a></li>
+          <li><a href="https://github.com/psanctuary/reading-room-public/blob/main/procedures/pdf/COM/SOP-COM-001-new-to-github-your-first-hour.pdf">PDF</a></li>
+        </ul>
+      </article>
+    </div>
+
+    <h2 id="decks"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></svg>Decks</h2>
     <div class="grid">
       <article class="card">
         <span class="tag">Public</span>
         <h3>Welcome to Psanctuary</h3>
-        <p>Where the proposals, the procedures and the decks live, how a change travels, and how to answer: a first walk
+        <p>Seven stops, from "I have no GitHub account" to "I read, I answer, and my helper reads with me": a first walk
           for a newcomer and the AI helper beside them.</p>
         <ul class="links">
           <li><a href="https://github.com/psanctuary/.github/blob/main/decks/welcome.marp.pdf">PDF</a></li>
@@ -88,38 +136,42 @@
       </article>
     </div>
 
-    <h2 id="procedures">Procedures</h2>
-    <div class="grid">
-      <article class="card">
-        <span class="tag">Public copy</span>
-        <h3>Standard operating procedures</h3>
-        <p>How an approved thing is done, step by step. The public copy holds only the procedures an officer has listed
-          for visitors; until the first one is listed, it holds a short README.</p>
-        <ul class="links">
-          <li><a href="https://github.com/psanctuary/ops-standard-operating-procedures-public">Open the public copy</a></li>
-        </ul>
-      </article>
-    </div>
+    <h2 id="procedures"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 12h-5"/><path d="M15 8h-5"/><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/></svg>Procedures</h2>
+    <p>How an approved thing is done, step by step. These nine are the same shape in every organisation the lab serves,
+      so they are public; each is a draft until the officers tag it.</p>
+    <ul class="sops">
+          <li><a href="https://github.com/psanctuary/reading-room-public/blob/main/procedures/COM/SOP-COM-001-new-to-github-your-first-hour.md">SOP-COM-001 · New to GitHub: your first hour</a> · <a href="https://github.com/psanctuary/reading-room-public/blob/main/procedures/pdf/COM/SOP-COM-001-new-to-github-your-first-hour.pdf">PDF</a></li>
+          <li><a href="https://github.com/psanctuary/reading-room-public/blob/main/procedures/OPS/SOP-OPS-001-how-a-change-travels.md">SOP-OPS-001 · How a change travels</a> · <a href="https://github.com/psanctuary/reading-room-public/blob/main/procedures/pdf/OPS/SOP-OPS-001-how-a-change-travels.pdf">PDF</a></li>
+          <li><a href="https://github.com/psanctuary/reading-room-public/blob/main/procedures/OPS/SOP-OPS-002-pull-requests-and-promotes.md">SOP-OPS-002 · Pull requests and Promotes</a> · <a href="https://github.com/psanctuary/reading-room-public/blob/main/procedures/pdf/OPS/SOP-OPS-002-pull-requests-and-promotes.pdf">PDF</a></li>
+          <li><a href="https://github.com/psanctuary/reading-room-public/blob/main/procedures/OPS/SOP-OPS-003-private-houses-everything-public-lanes-witness.md">SOP-OPS-003 · Private houses everything, public lanes witness</a> · <a href="https://github.com/psanctuary/reading-room-public/blob/main/procedures/pdf/OPS/SOP-OPS-003-private-houses-everything-public-lanes-witness.pdf">PDF</a></li>
+          <li><a href="https://github.com/psanctuary/reading-room-public/blob/main/procedures/IT/SOP-IT-001-vpn-dns-resolver-stalls.md">SOP-IT-001 · VPN and DNS resolver stalls</a> · <a href="https://github.com/psanctuary/reading-room-public/blob/main/procedures/pdf/IT/SOP-IT-001-vpn-dns-resolver-stalls.pdf">PDF</a></li>
+          <li><a href="https://github.com/psanctuary/reading-room-public/blob/main/procedures/IT/SOP-IT-002-reading-room-and-helper-access.md">SOP-IT-002 · Reading room and helper access</a> · <a href="https://github.com/psanctuary/reading-room-public/blob/main/procedures/pdf/IT/SOP-IT-002-reading-room-and-helper-access.pdf">PDF</a></li>
+          <li><a href="https://github.com/psanctuary/reading-room-public/blob/main/procedures/IT/SOP-IT-003-observer-dashboards-local-by-default.md">SOP-IT-003 · Observer dashboards</a> · <a href="https://github.com/psanctuary/reading-room-public/blob/main/procedures/pdf/IT/SOP-IT-003-observer-dashboards-local-by-default.pdf">PDF</a></li>
+          <li><a href="https://github.com/psanctuary/reading-room-public/blob/main/procedures/GOV/SOP-GOV-001-board-reading-room-membership.md">SOP-GOV-001 · Board reading room membership</a> · <a href="https://github.com/psanctuary/reading-room-public/blob/main/procedures/pdf/GOV/SOP-GOV-001-board-reading-room-membership.pdf">PDF</a></li>
+          <li><a href="https://github.com/psanctuary/reading-room-public/blob/main/procedures/GOV/SOP-GOV-002-github-collaboration.md">SOP-GOV-002 · GitHub collaboration</a> · <a href="https://github.com/psanctuary/reading-room-public/blob/main/procedures/pdf/GOV/SOP-GOV-002-github-collaboration.pdf">PDF</a></li>
+    </ul>
+    <p class="note">The same procedures also live in their own public copy,
+      <a href="https://github.com/psanctuary/ops-standard-operating-procedures-public">ops-standard-operating-procedures-public</a>.</p>
 
-    <h2 id="proposals">Proposals</h2>
+    <h2 id="proposals"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>Proposals</h2>
     <div class="grid">
       <article class="card">
         <span class="tag soon">Members first</span>
         <h3>Where ideas become plans</h3>
-        <p>Psanctuary's proposals are read and decided by its people first, so there is no public preview of them yet.
-          Members read every one, with a PDF of each, in the private reading room.</p>
+        <p>Psanctuary's proposals are read and decided by its people first, so only 000 Start here is public. Members read
+          every one, with a PDF of each, in the private reading room.</p>
         <ul class="links">
           <li><a href="https://github.com/psanctuary/reading-room">Members' reading room</a></li>
         </ul>
       </article>
     </div>
 
-    <h2 id="access">Ask for access</h2>
+    <h2 id="access"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg>Ask for access</h2>
     <p>The members' reading room is private to Psanctuary's people. To read it:</p>
     <ol class="steps">
       <li>Write to the church at <a href="mailto:info@psanctuary.org">info@psanctuary.org</a> or through
         <a href="https://www.psanctuary.org/contact">the contact form</a>, and say you would like to read the drafts.
-        Include your GitHub username if you have one (a free account is enough).</li>
+        Include your GitHub username if you have one (a free account is enough; SOP-COM-001 above walks you through it).</li>
       <li>An officer says yes; the technical steward, <a href="https://github.com/drasticstatic">Christopher W</a>,
         sends a GitHub invitation to Psanctuary and its <em>readers</em> team.</li>
       <li>Accept the invitation (the email from GitHub, or the bell icon on github.com), turn on two-factor
@@ -140,7 +192,7 @@
       <li><a href="https://psanctuary.github.io/changelog-astro-public/">AstroLog</a></li>
       <li><a href="https://github.com/psanctuary">Psanctuary on GitHub</a></li>
     </ul>
-    <p>This page is copied from Psanctuary's private reading room by a workflow; it is not edited here.</p>
+    <p>This page is copied from Psanctuary's private reading room by a workflow, after a check that reads every file; it is not edited here. Icons: <a href="https://lucide.dev">Lucide</a> (ISC).</p>
   </div>
 </footer>
 </body>

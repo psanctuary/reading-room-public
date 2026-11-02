@@ -1,0 +1,6 @@
+<!-- Status badge "wait / not now": a bar on a filled circle. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <title>Wait</title>
+  <circle cx="12" cy="12" r="11.5" fill="#b91c1c"/>
+  <path d="M7 12h10" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+</svg>
